@@ -1,0 +1,173 @@
+<div class="container">
+  <div class="header">
+    <app-header ></app-header>
+  </div>
+
+  <div class="container">
+    <h2>{{addrelatedTitile}}</h2>
+    <form class="form-inline"[formGroup]="createUserForm" (ngSubmit)="onClickOfCreateSubmit(createUserForm)">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" autocomplete="off"  formControlName="name"  id="name" placeholder="Enter Name" name="name">
+      </div>
+      <div class="error-messages">
+        <span class="text-danger"
+        *ngIf="createUserForm.controls['name'].hasError('required') && (createUserForm.controls['name'].dirty || createUserForm.controls['name'].touched)">Name
+         is required</span>
+      </div>
+      <div class="form-group">
+        <label for="job">Job:</label>
+        <input type="text" class="form-control" id="job"   formControlName="job"  placeholder="Enter Job" name="job">
+      </div>
+      <div class="error-messages">
+        <span class="text-danger"
+        *ngIf="createUserForm.controls['job'].hasError('required') && (createUserForm.controls['job'].dirty || createUserForm.controls['job'].touched)">Job
+         is required</span>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+  <br>
+  <div class="container">
+    <h2>{{editRelatedTitle}}</h2>
+    <form class="form-inline"[formGroup]="createUserForm" >
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" autocomplete="off"  formControlName="name"  id="name" placeholder="Enter Name" name="name">
+      </div>
+      <div class="error-messages">
+        <span class="text-danger"
+        *ngIf="createUserForm.controls['name'].hasError('required') && (createUserForm.controls['name'].dirty || createUserForm.controls['name'].touched)">Name
+         is required</span>
+      </div>
+      <div class="form-group">
+        <label for="job">Job:</label>
+        <input type="text" class="form-control" id="job"   formControlName="job"  placeholder="Enter Job" name="job">
+      </div>&nbsp;
+      <div class="error-messages">
+        <span class="text-danger"
+        *ngIf="createUserForm.controls['job'].hasError('required') && (createUserForm.controls['job'].dirty || createUserForm.controls['job'].touched)">Job
+         is required</span>
+      </div>
+       <div class="panel-footer">
+        <div class="btn-toolbar">
+          <button type="button" class="btn btn-primary" (click)="onPatchOfUserForm()" >Edit</button>&nbsp;
+          <button type="submit" class="btn btn-default"   (click)="onEditOfUserForm()">Update</button>&nbsp;
+          <button type ="button" class="btn btn-danger"  (click)="onClickOfDelete()">Delete</button>
+        </div>
+       </div>
+
+
+    </form>
+
+   <h1>
+   {{addRelatedSubTitle}}</h1>
+   <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">SI.No</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Designations</th>
+          <th scope ="col">Created Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <td >1</td>
+          <td>{{response?.name}}</td>
+          <td>{{response?.job}}</td>
+          <td>{{response?.createdAt|date:
+            'MM/dd/yyyy'}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </div>
+
+
+
+    <h1>{{patchRealtedTitle}}</h1>
+
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">SI.No</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Designations</th>
+            <th scope ="col">Updated Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td >1</td>
+            <td>{{responseAfterPatching?.name}}</td>
+            <td>{{responseAfterPatching?.job}}</td>
+            <td>{{responseAfterPatching?.updatedAt|date:
+              'MM/dd/yyyy'}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div>
+
+
+
+
+
+    <h1>response of the Updated list</h1>
+
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">SI.No</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Designations</th>
+            <th scope ="col">Updated Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td >1</td>
+            <td>{{responseAfterupdating?.name}}</td>
+            <td>{{responseAfterupdating?.job}}</td>
+            <td>{{responseAfterupdating?.updatedAt |date:
+              'MM/dd/yyyy'}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+<br>
+<br>
+
+
+  <div class="footer">
+    <div class="col">
+      <div class="footer-label" >
+        SkyWalk
+      </div>
+      <p class="footer-title">
+© 2021 All Rights Reserved for SkyWalk PVT. LTD
+      </p>
+    </div>
+  </div>
+</div>

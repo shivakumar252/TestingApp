@@ -1,0 +1,20 @@
+<nav>
+  <div class="row">
+    <div>
+      <img src="assets/logo.png" class="app-logo">
+    </div>
+    <div class="col">
+      <div class="app-label">
+        SkyWalk
+      </div>
+      <p class="sub-title">Code in Sky,Walk on Moon</p>
+    </div>
+
+   <a> <button type="button" (click)="onClickOfHome()"  [ngClass]="[bntStyle]" >Home</button></a>
+    <a><button (click)="onClickOfGallery()"   [ngClass]="[bntStyleForGallery]" >Users</button></a>
+  <a><button (click)="onClickOfAbout()"  [ngClass]="[bntStyleForAbout]" >About</button></a>
+  <a><button (click)=" onClickOfLogout()"  [ngClass]="[bntStyleForLogout]" >Logout</button></a>
+
+  </div>
+
+</nav>

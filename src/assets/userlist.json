@@ -1,0 +1,17 @@
+[
+    {
+    "userid" : "abc@media.com",
+    "password":"abc123",
+    "username":"tom",
+    "userId":1,
+    "userType":"private"
+    },
+    
+    {
+    "userid" : "def@media.com",
+    "password":"def123",
+    "”username”":"dick",
+    "userId":2,
+    "userType":"public"
+   }
+]

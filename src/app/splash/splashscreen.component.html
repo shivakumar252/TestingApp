@@ -1,0 +1,19 @@
+<div
+  class="app-splash-screen"
+  [ngStyle]="{ 
+    left: windowWidth, 
+    opacity: opacityChange,
+    transition: splashTransition
+  }"
+  *ngIf="showSplash"
+>
+  <div class="app-splash-inner">
+    <div class="app-logo">
+      <img src="assets/logo.png" class="app-logo">
+    </div>
+    <div class="app-label">SkyWalk</div>
+    <div class="app-loader">
+      <h5 class="sub-title">Code in Sky,Walk on Moon</h5>
+    </div>
+  </div>
+</div>
